@@ -4,6 +4,6 @@ with data as (
 
 select 
 
-  {{ datawaves_utils.hex('01010101') }} as actual,
+  {{ datawaves_utils.hex(datawaves_utils.binary_literal('01010101')) }} as actual,
   hex as expected
 from data

@@ -1,5 +1,5 @@
 {% macro binary_literal(expression) %}
-  {{ return(adapter.dispatch('binary_literal', packages = datawaves_utils._get_utils_namespaces()) (expression)) }}
+  {{ return(adapter.dispatch('binary_literal', 'datawaves_utils') (expression)) }}
 {% endmacro %}
 
 

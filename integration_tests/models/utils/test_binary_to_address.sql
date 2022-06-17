@@ -4,6 +4,6 @@ with data as (
 
 select 
 
-  {{ datawaves_utils.binary_to_address('binary_as_string') }} as actual,
+  {{ datawaves_utils.binary_to_address(datawaves_utils.binary_literal('ffffffffffffffffffff')) }} as actual,
   address as expected
 from data
