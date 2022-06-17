@@ -1,0 +1,19 @@
+config-version: 2
+
+name: 'datawaves_utils_integration_tests'
+version: '1.0'
+profile: 'datawaves_utils_integration_tests'
+
+
+dispatch:
+  - macro_namespace: 'datawaves_utils'
+    search_order: ['datawaves_utils_integration_tests', 'datawaves_utils']
+
+seeds:
+  
+  datawaves_utils_integration_tests:
+    utils:
+      data_binary_to_address:
+      data_displayed_amount:
+      data_hex:
+      data_substring:
