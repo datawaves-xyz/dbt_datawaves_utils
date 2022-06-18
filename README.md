@@ -1,16 +1,73 @@
-Welcome to your new dbt project!
 
-### Using the starter project
+# Datawaves Utilities for dbt
 
-Try running the following commands:
-- dbt run
-- dbt test
+This package includes macros that are used in Datawaves's dbt packages.
+
+## Cross-db utils
 
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
-# dbt_datawaves_utils
+### substring
+
+Returns a substring of the supplied string or binary value.
+
+#### Usage
+
+```sql
+{{ datawaves_utils.substring("text", "position", "length") }}
+```
+
+
+### hex
+
+Converts `expression` to hexadecimal.
+
+#### Usage:
+
+```sql
+{{ datawaves_utils.hex("binary_field") }}
+```
+
+
+### binary_literal
+
+A binary literal is used to specify a byte sequence value.
+
+#### Usage:
+
+```sql
+
+{{ datawaves_utils.binary_literal('01010101') }}
+
+```
+
+### displayed_amount
+
+Adjust the token amount according to the decimals.
+
+#### Usage:
+
+```sql
+{{ datawaves_utils.displayed_amount("original_amount", "decimals") }}
+```
+
+
+### binary_to_numeric
+
+Convert a binary column to numeric type.
+
+#### Usage:
+
+```sql
+{ datawaves_utils.binary_to_numeric("binary_field")) }}
+```
+
+
+### binary_to_address
+
+Convert a binary column to a hex string started with 0x.
+
+#### Usage:
+
+```sql
+{{ datawaves_utils.binary_to_address("binary_field") }} 
+```
